@@ -37,3 +37,10 @@ header .overlay {
   opacity: 0.5;
   z-index: 1;
 }
+/* Para pantallas pequeñas */
+@media screen and (max-width: 1500px) {
+  .video-background {
+     width: 100%;
+     height: auto;
+   }
+ }
