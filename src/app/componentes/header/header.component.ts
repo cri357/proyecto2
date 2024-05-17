@@ -9,9 +9,9 @@ declare var M: any;
 export class HeaderComponent implements AfterViewInit {
 
   carousel = [
-    { image: 'assets/img/agri1.jpg' },
-    { image: 'assets/img/camp.jpg' },
-    { image: 'assets/img/campo.jpg'}
+    { image: '../../../assets/img/agri1.jpg' },
+    { image: '../../../assets/img/camp.jpg' },
+    { image: '../../../assets/img/campo.jpg'}
   ];
 
   constructor() { }
