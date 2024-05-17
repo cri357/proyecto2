@@ -8,7 +8,5 @@ declare var M: any;
 })
 export class HeaderComponent {
 
-  nombreempresa = "Tienda Jordan";
-  slogan = "Vuela alto, viste Jordan.";
-  
+ 
 }
