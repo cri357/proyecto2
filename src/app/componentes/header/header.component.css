@@ -1,35 +1,39 @@
-
-.carousel {
-  height: 85vh; /* Ajusta esto según necesites */
+header {
+  position: relative;
+  background-color: black;
+  height: 100vh;
+  min-height: 25rem;
+  width: 100%;
+  overflow: hidden;
 }
 
-.carousel .carousel-item {
-  display: flex;
+header video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  z-index: 0;
+  -ms-transform: translateX(-50%) translateY(-50%);
+  -moz-transform: translateX(-50%) translateY(-50%);
+  -webkit-transform: translateX(-50%) translateY(-50%);
+  transform: translateX(-50%) translateY(-50%);
+}
+
+header .container {
+  position: relative;
+  z-index: 2;
+}
+
+header .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
   height: 100%;
+  width: 100%;
+  background-color: black;
+  opacity: 0.5;
+  z-index: 1;
 }
-
-.carousel .carousel-item img {
-  max-height: 100%; 
-  object-fit: cover; 
-  width: 100%; 
-}
-/* Estilos para tablets */
-@media (min-width: 900px) and (max-width: 1024px) {
-  .carousel {
-    height: 80vh; /* Altura más pequeña para tablets */
-  }
-}
-
-/* Estilos para móviles */
-@media (max-width: 1000px) {
-  .carousel {
-    height: 50vh; /* Altura más pequeña para móviles */
-  }
-}
-/* Estilos personalizados para header.component.html */
-@media only screen and (max-width: 1000px) {
-  .carousel-item img {
-     width: 50%;
-     height: auto;
-   }
- }

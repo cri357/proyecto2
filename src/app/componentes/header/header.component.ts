@@ -1,4 +1,4 @@
-import { Component, AfterViewInit } from '@angular/core';
+import { Component} from '@angular/core';
 
 declare var M: any;
 @Component({
@@ -6,27 +6,9 @@ declare var M: any;
   templateUrl: './header.component.html',
   styleUrl: './header.component.css'
 })
-export class HeaderComponent implements AfterViewInit {
+export class HeaderComponent {
 
-  carousel = [
-    { image: '../../../assets/img/agri1.jpg' },
-    { image: '../../../assets/img/camp.jpg' },
-    { image: '../../../assets/img/campo.jpg'}
-  ];
-
-  constructor() { }
+  nombreempresa = "Tienda Jordan";
+  slogan = "Vuela alto, viste Jordan.";
   
-  ngAfterViewInit(): void {
-    var elems = document.querySelectorAll('.carousel');
-    var instances = M.Carousel.init(elems, {
-      fullWidth: true,
-      indicators: true
-    });
-  
-    // Ajusta el intervalo a tu preferencia (5000 ms = 5 segundos)
-    setInterval(() => {
-      var instance = M.Carousel.getInstance(elems[0]);
-      instance.next();
-    }, 5000);
-  }
 }
