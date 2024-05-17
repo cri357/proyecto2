@@ -1,7 +1,7 @@
 header {
   position: relative;
   background-color: black;
-  height: 100vh;
+  height: 100%;
   min-height: 25rem;
   width: 100%;
   overflow: hidden;
@@ -12,7 +12,7 @@ header video {
   top: 50%;
   left: 50%;
   min-width: 100%;
-  min-height: 100%;
+  min-height: auto;
   width: auto;
   height: auto;
   z-index: 0;
@@ -38,9 +38,18 @@ header .overlay {
   z-index: 1;
 }
 /* Para pantallas pequeñas */
-@media screen and (max-width: 1500px) {
+@media screen and (max-width: 150px) {
   .video-background {
      width: 100%;
      height: auto;
    }
  }
+ .overlay {
+  opacity: 0.5; /* Opacidad general */
+}
+
+@media screen and (max-width: 100px) {
+ .overlay {
+    display: none; /* Oculta el overlay en pantallas pequeñas */
+  }
+}
